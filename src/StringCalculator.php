@@ -42,10 +42,10 @@ class StringCalculator
     {
         $delimitador = $this->getDelimitador($numbers);
         $numeros = $this->obtenerNumeros($numbers, $delimitador);
-        $error = "Negativos no soportados: ";
+        $error = "Negativos no soportados:";
         foreach ($numeros as $numero) {
             if ($numero < 0) {
-                $error .= $numero;
+                $error .= " " . $numero;
             }
         }
         return $error;
