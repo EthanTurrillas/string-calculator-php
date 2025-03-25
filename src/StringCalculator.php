@@ -18,7 +18,15 @@ class StringCalculator
     }
 
     private function convertirYSumar($numeros) {
-        return array_sum(array_map('intval', $numeros));
+        $numerosConvertidos = array_map('intval', $numeros);
+
+        $suma = 0;
+        foreach ($numerosConvertidos as $numero) {
+            if ($numero < 1000) {
+                $suma += $numero;
+            }
+        }
+        return $suma;
     }
 
     private function add($cadena) {
